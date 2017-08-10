@@ -1,0 +1,21 @@
+# Default values for external-dns.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  repository: registry.opensource.zalan.do/teapot/external-dns
+  tag: v0.4.2
+  pullPolicy: IfNotPresent
+externalDns:
+  domain: external-dns-test.my-org.com # will make ExternalDNS see only the hosted zones matching provided domain, omit to process all available hosted zones
+  provider: aws
+  policy: upsert-only # would prevent ExternalDNS from deleting any records, omit to enable full synchronization
+  ownerId: my-identifier
+
+resources: {}
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  #requests:
+  #  cpu: 100m
+  #  memory: 128Mi

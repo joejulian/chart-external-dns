@@ -1,0 +1,12 @@
+name: external-dns
+version: ${CHART_VER}
+description: Chart to install the external-dns controller
+keywords:
+- external dns
+- route53
+- aws
+home: https://github.com/samsung-cnct/chart-external-dns
+maintainers:
+- name: Joe Julian
+  email: me@joejulian.name
+engine: gotpl
